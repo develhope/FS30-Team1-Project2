@@ -1,43 +1,30 @@
-import { Input } from "@/components/ui/input";
-import ShineBorder from "@/components/ui/shine-border";
-import { RainbowButton } from "../ui/rainbow-button";
-import { useState } from "react";
+import ShineBorder from '@/components/ui/shine-border';
+import { RainbowButton } from '../ui/rainbow-button';
+import { useState } from 'react';
+import GeneralButton from '@/shared/components/generalButton/GeneralButton';
 
-
-
-
-
-
-
-
-const SearchBox : React.FC = () => {
-    const [search, setSearch] = useState('');
-    return(
-
-        <>
-
-        <div className="flex justify-center mt-20 flex-col items-center">
-        <ShineBorder color={["#A07CFE", "#FE8FB5", "#FFBE7B"]} borderWidth={6}
+const SearchBox: React.FC = () => {
+  const [search, setSearch] = useState('');
+  return (
+    <>
+      <div className="flex justify-center mt-20 flex-col items-center">
+        <ShineBorder
+          className="flex p-0"
+          color={['#A07CFE', '#FE8FB5', '#FFBE7B']}
+          borderWidth={2}
         >
-            {/* <Input type="text" placeholder="Enter Link 🔗"/> */}
-          <input className="z-10" type="text" placeholder="Enter Link 🔗" value={search} onChange={(event)=> setSearch(event.target.value)}/>
+          <input
+            className="z-10"
+            type="text"
+            placeholder="Enter Link 🔗"
+            value={search}
+            onChange={(event) => setSearch(event.target.value)}
+          />
+          <GeneralButton>Submit</GeneralButton>
         </ShineBorder>
-        <RainbowButton className="w-10 ">Submit</RainbowButton>
-        
-
-        </div>
-
-        
-
-        
-
-        </>
-      
-      
-
-        
-    )
-
-}
+      </div>
+    </>
+  );
+};
 
 export default SearchBox;
