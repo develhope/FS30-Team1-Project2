@@ -1,5 +1,5 @@
 import ShineBorder from '@/components/ui/shine-border';
-import { RainbowButton } from '../ui/rainbow-button';
+
 import { useState } from 'react';
 import GeneralButton from '@/shared/components/generalButton/GeneralButton';
 
@@ -9,7 +9,7 @@ const SearchBox: React.FC = () => {
     <>
       <div className="flex justify-center mt-20 flex-col items-center">
         <ShineBorder
-          className="flex p-0"
+          className="flex p-0 w-2/3"
           color={['#A07CFE', '#FE8FB5', '#FFBE7B']}
           borderWidth={2}
         >
