@@ -1,5 +1,4 @@
 import ShineBorder from '@/components/ui/shine-border';
-
 import { useState } from 'react';
 import GeneralButton from '@/shared/components/generalButton/GeneralButton';
 
