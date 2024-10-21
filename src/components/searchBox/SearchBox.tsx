@@ -20,7 +20,7 @@ const SearchBox: React.FC = () => {
             onChange={(event) => setSearch(event.target.value)}
           />
           <GeneralButton className="text-lg px-4 py-2 mr-2">
-            Submit
+            Start
           </GeneralButton>
         </ShineBorder>
       </div>
