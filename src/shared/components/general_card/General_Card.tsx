@@ -5,7 +5,7 @@ interface CardProps {
   children: React.ReactNode;
   className?: string;
 }
-const GenericCard: React.FC<CardProps> = ({ children, className }) => {
+const GeneralCard: React.FC<CardProps> = ({ children, className }) => {
   return (
     <>
       <ShineBorder
@@ -19,4 +19,4 @@ const GenericCard: React.FC<CardProps> = ({ children, className }) => {
   );
 };
 
-export default GenericCard;
+export default GeneralCard;
