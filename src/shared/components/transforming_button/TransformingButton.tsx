@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import GenericCard from '../general_card/General_Card';
+import GeneralCard from '../general_card/General_Card';
 import GeneralButton from '../generalButton/GeneralButton';
 
 interface TransformingButtonProps {
@@ -18,12 +18,14 @@ const TransformingButton: React.FC<TransformingButtonProps> = ({
     <>
       {isCard ? (
         <div
-          onClick={() => setIsCard(false)}
-          className={`fixed w-full h-full flex justify-end m-4 ${
-            className ?? ''
-          }`}
+          onClick={() => {
+            setIsCard(false);
+          }}
+          className={`fixed w-full h-full flex justify-end m-4 bg-transparent`}
         >
-          <GenericCard className="z-10">{card_children}</GenericCard>
+          <GeneralCard className={`z-50 ${className ?? ''}`}>
+            {card_children}
+          </GeneralCard>
         </div>
       ) : (
         <GeneralButton onClick={() => setIsCard(true)}>
