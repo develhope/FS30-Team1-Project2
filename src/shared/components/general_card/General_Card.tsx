@@ -4,7 +4,9 @@ import './general_card.css';
 interface CardProps {
   children: React.ReactNode;
   className?: string;
+  onClick?: () => void;
 }
+//todo : fix shine border by doing it with pure css then substituting all the shineborder with new divs
 const GeneralCard: React.FC<CardProps> = ({ children, className }) => {
   return (
     <>

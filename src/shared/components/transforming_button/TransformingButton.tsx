@@ -16,22 +16,24 @@ const TransformingButton: React.FC<TransformingButtonProps> = ({
 
   return (
     <>
-      {isCard ? (
-        <div
-          onClick={() => {
-            setIsCard(false);
-          }}
-          className={`fixed w-full h-full flex justify-end m-4 bg-transparent`}
-        >
-          <GeneralCard className={`z-50 ${className ?? ''}`}>
-            {card_children}
-          </GeneralCard>
-        </div>
-      ) : (
-        <GeneralButton onClick={() => setIsCard(true)}>
-          {button_children}
-        </GeneralButton>
+      {isCard && (
+        <>
+          <div
+            onClick={() => {
+              setIsCard(false);
+            }}
+            className={`opacity-10 fixed z-30 w-full h-screen flex justify-end  bg-black`}
+          ></div>
+          <div className="absolute m-2">
+            <GeneralCard className={`z-50 ${className ?? ''}`}>
+              {card_children}
+            </GeneralCard>
+          </div>
+        </>
       )}
+      <GeneralButton className="m-4" onClick={() => setIsCard(true)}>
+        {button_children}
+      </GeneralButton>
     </>
   );
 };

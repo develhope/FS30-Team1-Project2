@@ -4,7 +4,7 @@ import LoginForm from '../login_form/LoginForm';
 const TopBar: React.FC = () => {
   return (
     <>
-      <div className="flex justify-end m-4">
+      <div className="flex justify-end ">
         <TransformingButton
           card_children={<LoginForm/>}
           button_children={'Login'}
