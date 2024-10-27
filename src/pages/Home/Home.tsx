@@ -1,8 +1,10 @@
 import SearchBox from '@/components/searchBox/SearchBox';
 import Title from '@/components/title/Title';
 import TopBar from '@/components/topBar/TopBar';
-import WhyChooseUsElements from '@/components/whyChooseUsElements/WhyChooseUsElements';
-import WhyChooseUsElements2 from '@/components/whyChooseUsElements/WhyChooseUsElements2';
+import Convenience from '@/components/whyChooseUsElements/Convenience';
+import QualityDownloads from '@/components/whyChooseUsElements/QualityDownloads';
+import SafeAndSecure from '@/components/whyChooseUsElements/SafeAndSecure';
+import Simplicity from '@/components/whyChooseUsElements/Simplicity';
 import WhyChooseUsParent from '@/components/whyChooseUsParent/WhyChooseUsParent';
 
 const Home: React.FC = () => {
@@ -13,8 +15,10 @@ const Home: React.FC = () => {
       <SearchBox />
 
       <WhyChooseUsParent>
-        <WhyChooseUsElements />
-        <WhyChooseUsElements2 />
+        <Convenience />
+        <Simplicity />
+        <SafeAndSecure />
+        <QualityDownloads />
       </WhyChooseUsParent>
     </>
   );

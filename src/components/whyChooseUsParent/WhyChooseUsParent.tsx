@@ -7,11 +7,14 @@ type WhyChooseUsParentProps = {
 const WhyChooseUsParent: React.FC<WhyChooseUsParentProps> = ({children}) => {
 
     return(
-        <section>
-            
-            <h1>Why Choose Us?</h1>
+    <>
+
+        <h2 id="whyHeading">Why Choose Us?</h2>
+        <section className="md:grid-cols-2 lg:grid-cols-3">
             {children}
-            </section>
+        </section>
+
+    </>
         
     )
 }
